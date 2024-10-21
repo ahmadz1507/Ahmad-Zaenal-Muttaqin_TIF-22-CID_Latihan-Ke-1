@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulir Pendaftaran</title>
+        <meta name="description" content="Formulir Pendaftaran">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="hasil.html" method="get">
+                <fieldset>
+                    <legend>Formulir Pendaftaran</legend>
+                    <table border="0" cellspacing="10">
+                        <tr>
+                            <td><label for="first_name">Nama Depan:</label></td>
+                            <td><input type="text" id="first_name" name="first_name" placeholder="Nama Depan..." required /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="last_name">Nama Belakang:</label></td>
+                            <td><input type="text" id="last_name" name="last_name" placeholder="Nama Belakang..." required /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password:</label></td>
+                            <td><input type="password" id="password" name="password" placeholder="isi password..." required /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">Jenis Kelamin:</label></td>
+                            <td>
+                                <select id="gender" name="gender" required>
+                                    <option value="male">Laki-laki</option>
+                                    <option value="female">Perempuan</option>
+                                    <option value="other">Lainnya</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Jurusan:</label></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label><input type="radio" name="major" value="INFORMATIKA" required /> INFORMATIKA</label><br>
+                                <label><input type="radio" name="major" value="INDUSTRI" /> INDUSTRI</label><br>
+                                <label><input type="radio" name="major" value="BISDIG" /> BISDIG</label><br>
+                                <label><input type="radio" name="major" value="DKV" /> DKV</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="buttons">
+                        <input type="submit" value="SUBMIT"> 
+                        <input type="reset" value="BATAL">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hasil Formulir</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* Reset margin dan padding */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-image: url('img/BGBGBG.jpeg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100vh;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .container {
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                border-radius: 10px;
+                width: 60%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+
+            table {
+                margin: 0 auto;
+                border-collapse: collapse;
+                width: 100%;
+                background-color: #f9f9f9;
+                color: #333;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            th, td {
+                padding: 15px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #4CAF50;
+                color: white;
+                text-transform: uppercase;
+            }
+
+            tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            td {
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Data yang Diterima</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Nama Depan</td>
+                    <td id="first_name"></td>
+                </tr>
+                <tr>
+                    <td>Nama Belakang</td>
+                    <td id="last_name"></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td id="gender"></td>
+                </tr>
+                <tr>
+                    <td>Jurusan</td>
+                    <td id="major"></td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            // Function to get query string parameters
+            function getQueryParam(param) {
+                let params = new URLSearchParams(window.location.search);
+                return params.get(param);
+            }
+
+            // Set data into the table cells
+            document.getElementById('first_name').textContent = getQueryParam('first_name');
+            document.getElementById('last_name').textContent = getQueryParam('last_name');
+            document.getElementById('gender').textContent = getQueryParam('gender');
+            document.getElementById('major').textContent = getQueryParam('major');
+        </script>
+    </body>
+</html>
